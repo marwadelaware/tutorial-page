@@ -8,6 +8,11 @@
         @font-face {
             font-family: Porkys;
             src: url("fonts/PORKYS_.TTF");
+
+        @font-face {
+            font-family: Dogica;
+            src: url("fonts/dogica.otf")
+        }
         }
         .title {
             font-family: Porkys;
@@ -29,10 +34,12 @@
         }
 
         .check {
-            background-color: rgb(245, 172, 221);
-            padding: 1px 1px;
-            max-width: 100%;
-            word-break: break-all;
+            font-family: Dogica;
+            background: #edc7de;
+            background: linear-gradient(0deg,rgb(255, 177, 223) 0%, rgba(255, 245, 253, 1) 50%, rgba(255, 177, 223, 1) 100%);
+            padding: 10px 20px;
+            display: inline-block;
+        
         }
 
     </style>
@@ -42,6 +49,7 @@
     <img class = banner src = "images/banner.png">
     <div>
         <p class = check>CHECK OUT MY OTHER WEBSITES!!</p>
+        <p class = content>website 1</p>
     </div>
 </body>
 </html>
