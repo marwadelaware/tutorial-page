@@ -8,12 +8,13 @@
         @font-face {
             font-family: Porkys;
             src: url("fonts/PORKYS_.TTF");
+        }
 
         @font-face {
             font-family: Dogica;
             src: url("fonts/dogica.otf")
         }
-        }
+
         .title {
             font-family: Porkys;
             letter-spacing: 2px;
@@ -33,23 +34,73 @@
 
         }
 
-        .check {
+        .check, .check-2 {
+            margin: 0;
             font-family: Dogica;
             background: #edc7de;
             background: linear-gradient(0deg,rgb(255, 177, 223) 0%, rgba(255, 245, 253, 1) 50%, rgba(255, 177, 223, 1) 100%);
             padding: 10px 20px;
             display: inline-block;
+            color: rgb(181, 0, 109);
+            text-shadow: 2px 2px 4px rgb(208, 131, 186);
         
+        }
+
+        .check-2 {
+            padding: 10px 100px;
+        }
+
+        .everything {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .everything-bg {
+            opacity: 0.6;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .content {
+            font-family: Dogica;
+            font-size: 10px;
+            position: relative;
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .web-box {
+            position: relative;
+        }
+
+        .text {
+            margin: 0;
+            background: #deb4c4;
+            background: linear-gradient(0deg,rgb(255, 206, 225) 0%,  rgba(255, 255, 255, 1) 50%, rgb(255, 241, 247) 100%);
+            padding: 100px 10px;
+            color: rgb(24, 4, 14);
+        }
+
+        a {
+            color: hotpink;
         }
 
     </style>
 </head>
 <body>
     <h1 class = title>marwa's tutorial page :3</h1>
-    <img class = banner src = "images/banner.png">
-    <div>
-        <p class = check>CHECK OUT MY OTHER WEBSITES!!</p>
-        <p class = content>website 1</p>
+    <img class = banner src = "images/banner.png" alt = "">
+    <div class = everything>
+        <img class = "everything-bg" src = "https://i.ibb.co/wZZ1Z7Xc/f611812847a50ba45c347778f51fa81c.gif" alt = "">
+        <div class = "content">
+        <div class = web-box>
+            <p class = check>CHECK OUT MY OTHER WEBSITES!!</p>
+            <p class = "text">website 1: <span><a href = "https://marwadelaware.github.io/personalwebsite/">personal website ^_^</a></span>
+            <p class = check-2>thank you! <span><img src = "https://i.ibb.co/YBrQSbRf/fb8555af.gif"></span></p>
+        </div>
     </div>
 </body>
 </html>
