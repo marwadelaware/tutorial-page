@@ -26,6 +26,14 @@
             -webkit-text-fill-color: transparent;
             color: transparent;
             text-shadow: 2px 2px 4px rgb(254, 211, 242);
+            display: flex;
+            align-items: center;
+        }
+
+        #computer {
+            width: 300px;
+            height: auto;
+            margin-left: 50px;
         }
 
         .banner {
@@ -53,6 +61,8 @@
         .everything {
             overflow: hidden;
             position: relative;
+            display: flex;
+            flex-direction: row;
         }
 
         .everything-bg {
@@ -68,12 +78,18 @@
             font-family: Dogica;
             font-size: 10px;
             position: relative;
-            display: inline-flex;
-            flex-direction: column;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
         }
 
         .web-box {
             position: relative;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            max-width: fit-content;
         }
 
         .text {
@@ -82,16 +98,42 @@
             background: linear-gradient(0deg,rgb(255, 206, 225) 0%,  rgba(255, 255, 255, 1) 50%, rgb(255, 241, 247) 100%);
             padding: 100px 10px;
             color: rgb(24, 4, 14);
+            word-wrap: break-word;
+            box-shadow: border-box;
         }
 
         a {
             color: hotpink;
         }
 
+        .intro {
+            background-color: white;
+            padding: 0 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .intro-border {
+            margin-top: 10px;
+            background-color: hotpink;
+            background-image: url("images/polka-dot.jpeg");
+            padding: 5px 10px;
+        }
+
+        .madoka {
+            width: 300px;
+            height: auto;
+            display: flex;
+            align-self: flex-start;
+        }
+
     </style>
 </head>
 <body>
-    <h1 class = title>marwa's tutorial page :3</h1>
+    <h1 class = title>marwa's tutorial page <span><img id = "computer" src = "images/computer.jpeg"></span></h1>
     <img class = banner src = "images/banner.png" alt = "">
     <div class = everything>
         <img class = "everything-bg" src = "https://i.ibb.co/wZZ1Z7Xc/f611812847a50ba45c347778f51fa81c.gif" alt = "">
@@ -101,6 +143,11 @@
             <p class = "text">website 1: <span><a href = "https://marwadelaware.github.io/personalwebsite/">personal website ^_^</a></span>
             <p class = check-2>thank you! <span><img src = "https://i.ibb.co/YBrQSbRf/fb8555af.gif"></span></p>
         </div>
+        <div class = "intro-border">
+            <div class = "intro">
+                <img class = "madoka" src = "images/madoka.jpeg">
+                <p class = regular-text>hello! i'm marwa ^_^</p>
+            </div>
     </div>
 </body>
 </html>
