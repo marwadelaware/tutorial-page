@@ -58,11 +58,23 @@
             padding: 10px 100px;
         }
 
-        .everything {
+        .everything-row-1 {
             overflow: hidden;
             position: relative;
             display: flex;
             flex-direction: row;
+            border: 2px solid red;
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+        .everything-row-1::after {
+            display: flex;
+            flex-direction: column;
+        }
+        .everything-row-2 {
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .everything-bg {
@@ -120,7 +132,10 @@
             margin-top: 10px;
             background-color: hotpink;
             background-image: url("images/polka-dot.jpeg");
+            background-size: 300px auto;
+            background-repeat: repeat;
             padding: 5px 10px;
+            max-width: 1020px;
         }
 
         .madoka {
@@ -130,24 +145,50 @@
             align-self: flex-start;
         }
 
+        .regular-text {
+            line-height: 20px;
+            flex-direction: column;
+        }
+
+        .credits {
+            display: inline-flex;
+            background-color: white;
+            padding: 4px
+        }
+
     </style>
 </head>
 <body>
     <h1 class = title>marwa's tutorial page <span><img id = "computer" src = "images/computer.jpeg"></span></h1>
     <img class = banner src = "images/banner.png" alt = "">
-    <div class = everything>
+    <div class = everything-row-1>
         <img class = "everything-bg" src = "https://i.ibb.co/wZZ1Z7Xc/f611812847a50ba45c347778f51fa81c.gif" alt = "">
         <div class = "content">
-        <div class = web-box>
-            <p class = check>CHECK OUT MY OTHER WEBSITES!!</p>
-            <p class = "text">website 1: <span><a href = "https://marwadelaware.github.io/personalwebsite/">personal website ^_^</a></span>
-            <p class = check-2>thank you! <span><img src = "https://i.ibb.co/YBrQSbRf/fb8555af.gif"></span></p>
-        </div>
-        <div class = "intro-border">
-            <div class = "intro">
-                <img class = "madoka" src = "images/madoka.jpeg">
-                <p class = regular-text>hello! i'm marwa ^_^</p>
+            <div class = web-box>
+                <p class = check>CHECK OUT MY OTHER WEBSITES!!</p>
+                <p class = "text">website 1: <span><a href = "https://marwadelaware.github.io/personalwebsite/">personal website ^_^</a></span>
+                <p class = check-2>thank you! <span><img src = "https://i.ibb.co/YBrQSbRf/fb8555af.gif"></span></p>
             </div>
+            <div class = "nav-bar">
+                <p class = check>NAVBAR</p>
+                <p class = "text">website</p>
+                <p class = "check-2"></p>
+            </div>
+            <div class = "intro-border">
+                <div class = "intro">
+                    <img class = "madoka" src = "images/madoka.jpeg" alt = "">
+                    <p class = regular-text>hello! i'm marwa ^_^ (as you can tell LOL) and i REALLY <span style = "color: hotpink;"; >love</span> coding!!! <span><img src="https://i.ibb.co/sdck8qDv/3b923950.gif" alt = ""></span>
+                    however, my first website was hosted in <span><a href = "https://rentry.co/">rentry</a></span> which utilizes <span style = "color: hotpink">markdown</span> (check the how in rentry.co)
+                    to create easy websites for beginners while utilizing a source of "code". <span><img src = "https://i.ibb.co/pjXXmsTV/e2fbd1bd.gif" alt = ""></span> 
+                    transferring those skills to html + css wasn't entirely easy though as i had to learn different and slightly more complex formats, and some terms
+                    that were typically used in the rentry/crd community wasn't as well known in the one in html + css. <span style = "color: hotpink;">therefore, i am providing some tutorials for things 
+                    such as pixels and blinkies. however, learning the rest of html + css is simply general knowledge and can be learned through different websites, tutorials, programs
+                    etc. i will still link you some resources to help you learn though! <img src="https://i.ibb.co/KcgzBrxx/2868938e.gif">
+                    </span></p>
+                </div>
+                    <p class="credits">madoka image credits: @ikiuz on pin</p>
+                </div>
+        </div>
     </div>
 </body>
 </html>
