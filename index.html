@@ -110,7 +110,6 @@
             background: linear-gradient(0deg,rgb(255, 206, 225) 0%,  rgba(255, 255, 255, 1) 50%, rgb(255, 241, 247) 100%);
             padding: 10em 1em;
             color: rgb(24, 4, 14);
-            word-wrap: break-word;
             box-shadow: border-box; 
         }
 
@@ -161,6 +160,49 @@
             flex-direction: column;
         }
 
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px
+        }
+
+        #nav-check {
+            padding: 1em 5em;
+        }
+
+        #nav-check-2 {
+            padding: 10px 170px
+        }
+
+        #nav-check {
+            padding: 10px 140px;
+        }
+
+        #nav-background {
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .nav-bar {
+            margin: 10px
+        }
+        
+        .banner-flipped {
+            rotate: 180deg;
+        }
+
+        .madoka-silly {
+            width: 300px;
+            display: flex;
+            justify-self: center;
+        }
+
+        #thank {
+            color: hotpink;
+            display: flex;
+            justify-self: center;
+        }
+
     </style>
 </head>
 <body>
@@ -178,13 +220,15 @@
                     <p class = check-2>thank you! <span><img src = "https://i.ibb.co/YBrQSbRf/fb8555af.gif"></span></p>
                 </div>
                 <div class = "nav-bar">
-                    <p class = check>NAVBAR</p>
-                    <div class ="text-background">
-                        <p>pixels tutorial</p>
-                        <p>blinkies tutorial</p>
-                        <p>other resources</p>
+                    <p class = check id = nav-check>NAVBAR</p>
+                    <div class ="text-background" id = "nav-background">
+                        <div class = "links">
+                            <a href = "pixels.html">pixels tutorial</a>
+                            <a href = "blinkies.html">blinkies tutorial</a>
+                            <a href = "other.html">other resources</a>
+                        </div>
                     </div>
-                    <p class = "check-2"></p>
+                    <p class = "check-2" id = nav-check-2></p>
                 </div>
             </div>
             <div class = "intro-border">
@@ -203,5 +247,9 @@
                 </div>
         </div>
     </div>
+    <img class = banner-flipped src = "images/banner.png" alt = "">
+    <div = "end">
+    <img class="madoka-silly" src = "images/madoka-silly.jpeg" alt = "">
+    <p class = "content" id = "thank">thank you for your time!</p>
 </body>
 </html>
