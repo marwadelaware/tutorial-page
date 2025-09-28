@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>marwa's tutorial page !! </title>
+    <title>pixels tut !! </title>
     <style>
         @font-face {
             font-family: Porkys;
@@ -123,7 +123,7 @@
             padding: 0 5%;
             display: flex;
             flex-direction: row;
-            align-items: flex-start;
+            align-items: baseline;
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -135,7 +135,9 @@
             background-size: 300px auto;
             background-repeat: repeat;
             padding: 5px 10px;
-            max-width: 1020px;
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
         }
 
         .madoka {
@@ -209,12 +211,55 @@
             height: auto;
             display: flex;
             align-self: flex-start;
+            flex: 1 0 100%;
+            scroll-snap-align: start;
 
         }
 
         .column-imgs {
             display: flex;
             flex-direction: column;
+        }
+
+        .pixels {
+            display: inline-block;
+        }
+
+        .steps {
+            display: flex;
+            aspect-ratio: 16/9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+            border-radius: 0.5rem;
+        }
+        
+        .steps-nav {
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .steps-nav a {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: #d16e9a;
+            opacity: 0.75;
+            transition: opacity ease 250ms;
+        }
+
+        .steps-nav a:hover {
+            opacity: 1;
+        }
+
+        #scroll {
+            margin: 10px;
         }
 
     </style>
@@ -248,18 +293,18 @@
             <section class = "container">
                 <div class = "steps-border">
                     <div class = "steps">
-                        <!--
-                        <div class = "step-1">
+
+                        <div id = "step-1">
                             <div class = "column-imgs">
                                 <img class = "steps-img" id = "s1-p1" src = "images/s-1-p-1.png" alt = "the result of googling pixels crd">
                                 <img class = "steps-img" id = "s1-p1" src = "images/s-1-p-2.png" alt = "the result of googling rentry crd">
                             </div>
-                            <p class = "regular-text" id = "s1-p1">step 2:
+                            <p class = "regular-text" id = "s1-p1">step 1:
                             search up for pixel resources. main keywords that i use are 
                             "pixels crd" and "pixels" rentry</p>
                         </div>
                         
-                        <div class = "step-2">
+                        <div id = "step-2">
                             <div class = "column-imgs">
                                 <img class = "steps-img" id = "s2-p1" src = "images/s-2-p-1.png" alt = "on pixels.crd, i use two fingers to click on the pixel i want, a small pink tv because i am sadly a touchpad user.">
                                 <img class = "steps-img" id = "s2-p1" src = "images/s-2-p-2.png" alt = "content menu appears and i click on copy image address">
@@ -271,7 +316,7 @@
                         if you did it right, theres gonna be a context menu that pops up, so click on "copy image address". </p>
                         </div>
                         
-                        <div class = "warning">
+                        <div id = "warning">
                             <div class = "column-imgs">
                                 <img class = "steps-img" id = "warning" src = "images/warning.png" alt = "example of hotlinking.">
                             </div>
@@ -280,16 +325,7 @@
                             know... DON'T BE LIKE ME) </p>
                         </div>
                         
-                        <div class = "warning">
-                            <div class = "column-imgs">
-                                <img class = "steps-img" id = "warning" src = "images/warning.png" alt = "example of hotlinking. which is BAD!!!!">
-                            </div>
-                            <p class = "regular-text" id = "s2-p1">WARNING: WAIT THOUGH!!!! don't go ahead and do this!!!!!!! this is called <a href = "https://www.lenovo.com/us/en/glossary/hotlink/?orgRef=https%253A%252F%252Fwww.google.com%252F&srsltid=AfmBOorlczo5gYFA7q88Y-SXy2-b6I_rQOFMRdfC8n1fdILeA79DKbAd">HOTLINKING</a>, and this is 
-                            cyber bad manners. (well how did i know that? oh uh... heh... i almost hotlinked some of my pixels in my personal website, but i was stupid and didn't 
-                            know... DON'T BE LIKE ME) </p>
-                        </div>
-                       
-                        <div class = "step-3-part-1">
+                        <div id = "step-3-part-1">
                             <div class = "column-imgs">
                                 <img class = "steps-img" id = "s3-p1" src = "images/s-3-p-1.png" alt = "in imgbb, i pasted the link and it automatically uploads my image in html code.">
                             </div>
@@ -297,14 +333,14 @@
                             it will automatically upload the image in the HTML full linked version (if that doesn't show up, then click the menu underneath embed codes. HTML full linked version should appear there. click it)</p>
                         </div>
                         
-                        <div class = "step-3-part-2">
+                        <div id = "step-3-part-2">
                             <div class = "column-imgs">
                                 <img class = "steps-img" id = "s3-p2" src = "images/s-3-p-2.png" alt = "i boxed something in pink indicating what to copy/paste">
                             </div>
                             <p class = "regular-text" id = "s3-p2">step 3/part 2: copy this section of the link, from "greater than symbol + "< img" to ".gif," as boxed in pink</p>
                         </div>
                         
-                        <div class = "step-3-part-3">
+                        <div id = "step-3-part-3">
                             <div class = "column-imgs">
                                 <img class = "steps-img" id = "s3-p3" src = "images/s-3-p-3.png" alt = "pasted the code, added alt text and >">
                             </div>
@@ -312,17 +348,40 @@
                                 decorative (that makes the alt text reader skip over it and onto yout other text) and then the ">" at the end to close the statement.
                             </p>
                         </div>
-                        -->
-                        <div class = "add-notes">
+
+                        <div id = "add-notes">
                             <div class = "column-imgs">
-                                <img class = "steps-img" id = "notes" src = "images/s-3-p-3.png" alt = "pasted the code, added alt text and >">
+                                <img class = "steps-img" id = "notes" src = "images/info-1.png" alt = "pasted the code, added alt text and >">
+                                <img class = "steps-img" id = "notes" src = "images/info-2.png" alt = "pasted the code, added alt text and >">
                             </div>
-                            <p class = "regular-text" id = "notes">addtiional note: by default, the pixels will display as block, meaning that they will appear under y
+                            <p class = "regular-text" id = "notes">addtiional note: by default, the pixels will display as block, meaning that they will appear under your text. if that's your intention, keep it like this, OR
+                                define your img class as whatever you want (i chose pixels) and in CSS, enter the class name and display: inline-block. If you want to add more pixels like that, put them in
+                                the same class.
+                                <img class = pixels src= "https://i.ibb.co/rKyZ6v45/08818d03.gif">
+                            </p> 
+                        </div>
+
+                        <div id = "done">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "ALPHA" src = "images/alpha.jpeg" alt = "pasted the code, added alt text and >">
+                            </div>
+                            <p class = "regular-text" id = "id-done"> AND YOU'RE DONE!!!! Now you're an alpha like me (I'm still better though /j)
                             </p> 
                         </div>
                     </div>
+                    <div class = steps-nav>
+                        <a href = #step-1></a>
+                        <a href = #step-2></a>
+                        <a href = #warning></a>
+                        <a href = #step-3-part-1></a>
+                        <a href = #step-3-part-2></a>
+                        <a href = #step-3-part-3></a>
+                        <a href = #add-notes></a>
+                        <a href = #done></a>
+                    </div>
                 </div> 
             </section>
+            <p class = check id = scroll>scroll up/down if needed! plus you can also click the circles to navigate :p</p>
         </div>
 </div>
     <img class = banner-flipped src = "images/banner.png" alt = "">
