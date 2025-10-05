@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blinkies tut !! </title>
+    <style>
+        @font-face {
+            font-family: Porkys;
+            src: url("fonts/PORKYS_.TTF");
+        }
+
+        @font-face {
+            font-family: Dogica;
+            src: url("fonts/dogica.otf")
+        }
+
+        .title {
+            font-family: Porkys;
+            letter-spacing: 2px;
+            font-size: 100px;
+            text-align: center;
+            background-clip: padding-box;
+            background-image: radial-gradient(circle,rgb(249, 161, 221) 0%, rgb(198, 57, 127) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgb(254, 211, 242);
+            display: flex;
+            align-items: center;
+            justify-self: center;
+        }
+
+        #computer {
+            width: 300px;
+            height: auto;
+            margin-left: 50px;
+        }
+
+        .banner {
+            display: block;
+            margin: auto;
+
+        }
+
+        .check, .check-2 {
+            margin: 0;
+            font-family: Dogica;
+            background: #edc7de;
+            background: linear-gradient(0deg,rgb(255, 177, 223) 0%, rgba(255, 245, 253, 1) 50%, rgba(255, 177, 223, 1) 100%);
+            padding: 10px 20px;
+            display: inline-block;
+            color: rgb(181, 0, 109);
+            text-shadow: 2px 2px 4px rgb(208, 131, 186);
+        
+        }
+
+        .check-2 {
+            padding: 10px 100px;
+        }
+
+        .everything-row-1 {
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            border: 2px solid hotpink;
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+        .everything-row-1::after {
+            display: flex;
+            flex-direction: column;
+        }
+        .everything-row-2 {
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .everything-bg {
+            opacity: 0.6;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        .content {
+            font-family: Dogica;
+            font-size: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .web-box {
+            position: relative;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            max-width: fit-content;
+        }
+
+        .text-background {
+            margin: 0;
+            background: #deb4c4;
+            background: linear-gradient(0deg,rgb(255, 206, 225) 0%,  rgba(255, 255, 255, 1) 50%, rgb(255, 241, 247) 100%);
+            padding: 10em 1em;
+            color: rgb(24, 4, 14);
+            box-shadow: border-box; 
+        }
+
+        a {
+            color: hotpink;
+        }
+
+        .steps {
+            background-color: white;
+            padding: 0 5%;
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .steps-border {
+            margin-top: 10px;
+            background-color: hotpink;
+            background-image: url("images/polka-dot.jpeg");
+            background-size: 300px auto;
+            background-repeat: repeat;
+            padding: 5px 10px;
+            position: relative;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+
+        .madoka {
+            width: 300px;
+            height: auto;
+            display: flex;
+            align-self: flex-start;
+        }
+
+        .regular-text {
+            line-height: 20px;
+            flex-direction: column;
+        }
+
+        .credits {
+            display: inline-flex;
+            background-color: white;
+            padding: 4px
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px
+        }
+
+        #nav-check {
+            padding: 1em 5em;
+        }
+
+        #nav-check-2 {
+            padding: 10px 170px
+        }
+
+        #nav-check {
+            padding: 10px 140px;
+        }
+
+        #nav-background {
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .nav-bar {
+            margin: 10px
+        }
+        
+        .banner-flipped {
+            rotate: 180deg;
+        }
+
+        .madoka-silly {
+            width: 300px;
+            display: flex;
+            justify-self: center;
+        }
+
+        #thank {
+            color: hotpink;
+            display: flex;
+            justify-self: center;
+        }
+
+        .steps-img {
+            width: 700px;
+            height: auto;
+            display: flex;
+            align-self: flex-start;
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+
+        }
+
+        .column-imgs {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blinkies {
+            display: inline-block;
+        }
+
+        .steps {
+            display: flex;
+            aspect-ratio: 16/9;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+            border-radius: 0.5rem;
+        }
+        
+        .steps-nav {
+            display: flex;
+            column-gap: 1rem;
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .steps-nav a {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: #d16e9a;
+            opacity: 0.75;
+            transition: opacity ease 250ms;
+        }
+
+        .steps-nav a:hover {
+            opacity: 1;
+        }
+
+        #scroll {
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class = title>blinkies tutorial<span><img id = "computer" src = "images/computer.jpeg"></span></h1>
+    <img class = banner src = "images/banner.png" alt = "">
+    <div class = everything-row-1>
+        <img class = "everything-bg" src = "https://i.ibb.co/wZZ1Z7Xc/f611812847a50ba45c347778f51fa81c.gif" alt = "">
+        <div class = "content">
+            <div class = boxes>
+                <div class = web-box>
+                    <p class = check>CHECK OUT MY OTHER WEBSITES!!</p>
+                    <div class ="text-background">
+                        <p>website 1: <span><a href = "https://marwadelaware.github.io/personalwebsite/">personal website ^_^</a></span>
+                    </div>
+                    <p class = check-2>thank you! <span><img src = "https://i.ibb.co/YBrQSbRf/fb8555af.gif"></span></p>
+                </div>
+                <div class = "nav-bar">
+                    <p class = check id = nav-check>NAVBAR</p>
+                    <div class ="text-background" id = "nav-background">
+                        <div class = "links">
+                            <a href = "index.html">home</a>
+                            <a href = "pixels.html">pixels tutorial</a>
+                            <a href = "other.html">other resources</a>
+                        </div>
+                    </div>
+                    <p class = "check-2" id = nav-check-2></p>
+                </div>
+            </div>
+            <section class = "container">
+                <div class = "steps-border">
+                    <div class = "steps">
+
+                        <div id = "step-1">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "s1-p1" src = "images/b-1-1.png" alt = "the result of googling blinkies. boxed in pink, highlights
+                                the website, blinkies.cafe. you should click on that website.">
+                            </div>
+                            <p class = "regular-text" id = "s1-p1">step 1:
+                            search up for blinkie resources. i like to use <a href = "blinkies.cafe">blinkies.cafe</a> since their blinkies are customizable.
+                        </div>
+                        
+                        <div id = "step-2">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "s2-p1" src = "images/b-2.png" alt = "me on the website, blinkies-cafe.">
+                                <img class = "steps-img" id = "s2-p1" src = "images/b-2-2.png" alt = "browsing through all the blinkies until i find one that i like (it is boxed in pink).">
+                            </div>
+                            <p class = "regular-text" id = "s2-p1">step 2:
+                            click on the website (recommended to be on blinkies.cafe as the next steps apply to this, if you aren't, then follow steps 2 to step 3 part 3 of pixels. you can achieve 
+                        a similar effect. however, come back to additional notes for blinkies.) anyway, browse through the different blinkies until you find one you like and click on it. don't worry, as i 
+                        mentioned before, you can customize the blinkies in blinkies-cafe.  </p>
+                        </div>
+                        
+                        <div id = "step-3">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "s3-p1" src = "images/b-3.png" alt = "customizable panel appears (containing settings such as text, fonts, and scale) i only 
+                                change the text to ultra alpha because that's what i am, but you can do whatever!">
+                                <img class = "steps-img" id = "s3-p1" src = "images/b-3-2.png" boxed in pink is the download button, which you should press.>
+                            </div>
+                            <p class = "regular-text" id = "s3-p1">step 3: anyway, what should appear is a customizable panel. you can adjust the text, fonts, scale, etc to whatever you want. then, click the download button. </p>
+                        </div>
+                        
+                        <div id = "step-4">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "s4-p1" src = "images/b-4.png" alt = "in imgbb, dragged the downloaded files into the upload section">
+                            </div>
+                            <p class = "regular-text" id = "s4-p1">step 4: go to <a href="https://imgbb.com/">imgbb</a> and drag the downloaded files into the uploaded section.
+                            </p>
+                        </div>
+                        
+                        <div id = "step-5">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "s5-p1" src = "images/b-5-2.png" alt = "i boxed something in pink indicating what to copy/paste.">
+                            </div>
+                            <p class = "regular-text" id = "s5-p1">step 5: it will automatically upload the image in the HTML full linked version (if that doesn't show up, then click the menu underneath embed codes. HTML full linked version should appear there. click it)
+                            copy this section of the link, from "greater than symbol + "img" to ".gif," as boxed in pink.
+                            </p>
+                        </div>
+                        
+                        <div id = "step-6">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "s6-p1" src = "images/b-6.png" alt = "copy and pasted the code and added alt text (based on whatever you put as your blinkie text)
+                                then added a greater than sign to close the img code">
+                            </div>
+                            <p class = "regular-text" id = "s6-p1">step 3/part 3: NOW paste this section of the link into your code. Add alt = "whatever-your-text-is" depending on what you put for your blinkie text 
+                                to make things more accessible for people hehe.
+                            </p>
+                        </div>
+
+                        <div id = "add-notes">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "notes" src = "images/b-add-note.png" alt = "html code updated to add class = blinkies to help with inline">
+                                <img class = "steps-img" id = "notes" src = "images/b-add-note2.png" alt = "in css, the blinkies class (.blinkies) sets the display to inline (display: inline;)">
+                            </div>
+                            <p class = "regular-text" id = "notes">addtiional note: by default, the blinkies will display as block, meaning that they will appear under your text. if that's your intention, keep it like this, OR
+                                define your img class as whatever you want (i chose pixels) and in CSS, enter the class name and display: inline-block. If you want to add more pixels like that, put them in
+                                the same class.
+                                <img class = pixels src= "https://i.ibb.co/rKyZ6v45/08818d03.gif">
+                            </p> 
+                        </div>
+
+                        <div id = "add-notes">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "notes" src = "images/b-add-note.png" alt = "html code updated to add class = blinkies to help with inline">
+                                <img class = "steps-img" id = "notes" src = "images/b-add-note2.png" alt = "in css, the blinkies class (.blinkies) sets the display to inline (display: inline;)">
+                            </div> 
+                            <p class = "regular-text" id = "notes">addtiional note (1): by default, the blinkies will display as block, meaning that they will appear under your text. if that's your intention, keep it like this, OR
+                                define your img class as whatever you want (i chose pixels) and in CSS, enter the class name and display: inline-block.
+                                <img class = pixels src= "https://i.ibb.co/rKyZ6v45/08818d03.gif">
+                            </p> 
+                        </div>
+
+                        <div id = "add-notes-2">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "notes-2" src = "images/b-add-note3.png" alt = "html code w/ link (/a) wrapped around it">
+                                
+                            </div> 
+                            <p class = "regular-text" id = "notes">addtiional note: by default, the blinkies will display as block, meaning that they will appear under your text. if that's your intention, keep it like this, OR
+                                define your img class as whatever you want (i chose pixels) and in CSS, enter the class name and display: inline-block. If you want to add more pixels like that, put them in
+                                the same class. also if you want the blinkie to serve as a button, wrap the img tag in a link tag as shown above (with the "a" tag as shown above.)
+                                <img class = pixels src= "https://i.ibb.co/rKyZ6v45/08818d03.gif">
+                                <p class = "regular-text" id = "notes">addtiional note (2): also if you want the blinkie to serve as a button, wrap the img tag in a link tag as shown above (with the "a" tag as shown above.)
+                            </p> 
+                        </div>
+
+
+                        <div id = "done">
+                            <div class = "column-imgs">
+                                <img class = "steps-img" id = "ALPHA" src = "images/alpha-blinkie.png" alt = "picture of result of coding process">
+                            </div>
+                            <p class = "regular-text" id = "id-done"> AND YOU'RE DONE!!!! Now you're an alpha like me (I'm still ultra alpha, so does that count?? [jk])
+                            </p> 
+                        </div>
+                    </div>
+                    <div class = steps-nav>
+                        <a href = #step-1></a>
+                        <a href = #step-2></a>
+                        <a href = #step-3></a>
+                        <a href = #step-4></a>
+                        <a href = #step-5></a>
+                        <a href = #step-6></a>
+                        <a href = #add-notes></a>
+                        <a href = #add-notes-2></a>
+                        <a href = #done></a>
+                </div> 
+            </section>
+            <p class = check id = scroll>scroll up/down if needed! plus you can also click the circles to navigate :p</p>
+        </div>
+</div>
+    <img class = banner-flipped src = "images/banner.png" alt = "">
+    <div class = "end">
+    <img class="madoka-silly" src = "images/madoka-silly.jpeg" alt = "">
+    <p class = "content" id = "thank">thank you for your time!</p>
+    </div>
+</body>
+</html>
